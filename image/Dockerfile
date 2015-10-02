@@ -22,6 +22,9 @@ RUN apt-get update \
 			 php5-ldap \
 			 php5-readline \
 			 curl \
+			 python2.7 \
+			 libsvn-dev \
+			 libapr1-dev \
 		&& curl -o phpldapadmin.tgz -SL http://downloads.sourceforge.net/project/phpldapadmin/phpldapadmin-php5/${PHPLDAPADMIN_VERSION}/phpldapadmin-${PHPLDAPADMIN_VERSION}.tgz \
 		&& echo "$PHPLDAPADMIN_SHA1 *phpldapadmin.tgz" | sha1sum -c - \
 		&& mkdir -p /var/www/phpldapadmin_bootstrap /var/www/phpldapadmin \
